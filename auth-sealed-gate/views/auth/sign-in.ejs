@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Codoria</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <%- include('../partials/navbar.ejs') %>
+    <main class="form-page panel">
+      <p class="eyebrow">The Gatekeeper</p>
+      <h1>🗝️ Present Your Royal Seal</h1>
+
+      <% if (user) { %>
+        <p class="notice">You are already signed in as <strong><%= user.username %></strong>.</p>
+      <% } %>
+
+      <form action="/auth/sign-in" method="POST">
+        <label for="username">Knight name</label>
+        <input id="username" name="username" type="text" required>
+
+        <label for="password">Secret phrase</label>
+        <input id="password" name="password" type="password" required>
+
+        <button type="submit">Unlock the Gates</button>
+      </form>
+      <p class="form-note">No royal seal? <a href="/auth/sign-up">Register here</a>.</p>
+    </main>
+  </body>
+</html>
