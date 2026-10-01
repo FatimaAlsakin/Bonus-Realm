@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Royal Vault</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <%- include('partials/navbar.ejs') %>
+    <main class="hero panel vault">
+      <p class="eyebrow">Protected Chamber</p>
+      <div class="gate" aria-hidden="true">👑</div>
+      <h1>Welcome, <%= user.username %>!</h1>
+      <p>You repaired the Gatekeeper's runes and entered the Royal Vault.</p>
+      <a class="button" href="/auth/sign-out">Leave the Vault</a>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+:root {
+  --ink: #25180f;
+  --paper: #f4e3b7;
+  --wine: #6d1825;
+  --gold: #c79b46;
+  --forest: #274635;
+  --night: #17120e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  font-family: Georgia, serif;
+  background: radial-gradient(circle at top, #4d3424, var(--night) 65%);
+}
+
+a {
+  color: inherit;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px max(24px, calc((100% - 1000px) / 2));
+  color: #fff3d2;
+  border-bottom: 2px solid var(--gold);
+  background: #301d13;
+}
+
+.navbar div {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.brand {
+  color: #f1c968;
+  font-weight: bold;
+}
+
+.panel {
+  width: min(720px, calc(100% - 32px));
+  margin: 60px auto;
+  padding: 40px;
+  border: 3px double var(--gold);
+  border-radius: 16px;
+  background: var(--paper);
+  box-shadow: 0 18px 50px #0008;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero h1,
+.form-page h1 {
+  color: var(--wine);
+}
+
+.eyebrow {
+  color: var(--forest);
+  font-weight: bold;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.gate {
+  margin: 12px;
+  font-size: 5rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.button,
+button {
+  display: inline-block;
+  padding: 12px 20px;
+  color: white;
+  font: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #e6c36d;
+  border-radius: 8px;
+  background: var(--wine);
+  cursor: pointer;
+}
+
+.button.secondary {
+  background: var(--forest);
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  font: inherit;
+  border: 1px solid #96733b;
+  border-radius: 6px;
+  background: #fffaf0;
+}
+
+form button {
+  margin-top: 16px;
+}
+
+.notice {
+  padding: 12px;
+  border-left: 5px solid var(--gold);
+  background: #fff6d7;
+}
+
+.form-note {
+  margin-top: 24px;
+  text-align: center;
+}
+
+@media (max-width: 620px) {
+  .navbar,
+  .navbar div {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .panel {
+    margin: 28px auto;
+    padding: 24px;
+  }
+}

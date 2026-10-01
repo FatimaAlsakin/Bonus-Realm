@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Kingdom</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <%- include('../partials/navbar.ejs') %>
+    <main class="form-page panel">
+      <p class="eyebrow">Royal Registry</p>
+      <h1>⚔️ Become a Knight</h1>
+      <form action="/auth/sign-up" method="POST">
+        <label for="username">Knight name</label>
+        <input id="username" name="username" type="text" required>
+
+        <label for="password">Secret phrase</label>
+        <input id="password" name="password" type="password" required>
+
+        <label for="confirmPassword">Confirm secret phrase</label>
+        <input id="confirmPassword" name="confirmPassword" type="password" required>
+
+        <button type="submit">Receive Royal Seal</button>
+      </form>
+      <p class="form-note">Already registered? <a href="/auth/sign-in">Sign in here</a>.</p>
+    </main>
+  </body>
+</html>
